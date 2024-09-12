@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: hsl(25, 97%, 53%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-grey: hsl(217, 12%, 63%);
+  --clr-dark-blue: hsl(213, 19%, 18%);
+  --clr-dark-blue-50: hsl(215, 25%, 15%);
+  --clr-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.4;
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-white);
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.main {
+  margin-bottom: 2rem;
+}
+.card {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--clr-dark-blue-50);
+  border-radius: 20px;
+  transition: all 300ms ease;
+}
+
+.card-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+
+  h2 {
+    margin: 1rem 0 0;
+  }
+
+  p {
+    text-align: center;
+    /* margin: 1rem 0 0; */
+  }
+  & > .message {
+    background-color: hsla(217, 12%, 63%, 0.201);
+    color: var(--clr-primary);
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    margin: 1rem 0;
+  }
+}
+
+.card h2 {
+  font-size: 2rem;
+  color: var(--clr-white);
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: var(--clr-light-grey);
+}
+
+.card.hide {
+  display: none;
+  /* transform: translateX(50%) scale(0);
+  opacity: 0; */
+}
+
+.btn {
+  display: block;
+  color: var(--clr-light-grey);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.btn-rating {
+    width: 60px;
+    height: 60px;
+    background-color: var(--clr-dark-blue);
+    border-radius: 50%;
+  }
+  &.btn-submit {
+    width: 100%;
+    background-color: var(--clr-primary);
+    color: var(--clr-dark-blue);
+    border-radius: 20px;
+
+    &:hover {
+      background-color: var(--clr-white);
+    }
+  }
+  &:hover {
+    background-color: var(--clr-primary);
+  }
+  &.selected {
+    background-color: var(--clr-white);
+  }
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--clr-dark-blue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: var(--clr-primary);
+}
